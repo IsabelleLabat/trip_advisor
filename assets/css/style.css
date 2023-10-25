@@ -1,0 +1,166 @@
+/* Général */
+body {
+  /* Utilisation de la font importée */
+  font-family: TS-Reg, sans-serif;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px;
+}
+/* Header */
+
+.container {
+  width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  height: 80px;
+}
+
+header img {
+  width: 200px;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+}
+.nav-header a {
+  padding: 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+.nav-header a:hover {
+  background-color: rgba(212, 211, 211, 0.927);
+}
+.nav-header i {
+  margin-right: 10px;
+}
+button {
+  background-color: #000000;
+  border-radius: 50px;
+  border: none;
+  height: 40px;
+  width: 150px;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+/* MAIN */
+
+main {
+  width: 1140px;
+
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+section {
+  width: 100%;
+}
+
+h1 span {
+  color: #f75d5d;
+  font-size: 50px;
+  font-weight: 600;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.services li {
+  border: solid 1px #000000;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.services li:hover {
+  color: white;
+  background-color: #000000;
+}
+
+li i {
+  margin-left: 15px;
+}
+
+.containerImg {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+}
+.col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.col1 {
+  display: flex;
+}
+
+.containerImg img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.infos {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.infos nav {
+  flex: 2;
+}
+
+.infos div {
+  background-color: #f75d5d;
+  flex: 1.3;
+  border-radius: 10px;
+}
+
+.map {
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.infos div p {
+  font-size: 12px;
+  margin: 20px;
+}
+
+.infos button {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
