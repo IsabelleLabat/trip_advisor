@@ -4,8 +4,13 @@ body {
   font-family: TS-Reg, sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 h2 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -34,6 +39,11 @@ h3 {
 
 header {
   height: 80px;
+  position: fixed;
+  top: 0;
+  left: 140px;
+  background-color: white;
+  z-index: 1;
 }
 
 header img {
@@ -49,8 +59,6 @@ header img {
 .nav-header a {
   padding: 10px;
   border-radius: 20px;
-  text-decoration: none;
-  color: inherit;
 }
 .nav-header a:hover {
   background-color: rgba(212, 211, 211, 0.927);
@@ -75,7 +83,7 @@ main {
 
   height: 100%;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 140px;
 }
 
 section {
@@ -163,4 +171,110 @@ li i {
 .infos button {
   margin-bottom: 20px;
   margin-left: 20px;
+}
+
+.infos div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*------------- */
+/*------------- */
+/*------------- */
+/* Carousel */
+
+.section2 {
+  margin-top: 50px;
+}
+.slide {
+  width: 270px;
+  height: 300px;
+  flex-shrink: 0;
+}
+
+.carousel {
+  display: flex;
+  overflow: scroll hidden;
+  gap: 10px;
+  flex: 2;
+}
+
+.text {
+  flex: 1;
+}
+
+.immanquables {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.carousel img {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.carousel i {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: relative;
+  bottom: 200px;
+  left: 220px;
+}
+
+.infoCarousel li {
+  width: 10px;
+  height: 10px;
+  background-color: #3baa6c;
+  border-radius: 50%;
+}
+
+.infoCarousel ul {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.infoCarousel h4 {
+  margin-top: -30px;
+}
+
+.infoCarousel p {
+  font-size: 14px;
+}
+
+.immanquables h3 {
+  margin-left: 0;
+}
+
+.immanquables div p {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #faf1ed;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+footer img {
+  width: 40px;
+}
+
+footer a {
+  font-weight: bold;
 }
