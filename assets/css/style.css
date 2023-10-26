@@ -39,17 +39,19 @@ h3 {
 
 header {
   height: 80px;
-  position: fixed;
   top: 0;
   left: 140px;
   background-color: white;
-  z-index: 1;
 }
 
 header img {
   width: 200px;
 }
 
+header p {
+  font-weight: 700;
+  display: none;
+}
 .nav-header {
   display: flex;
   justify-content: flex-end;
@@ -76,11 +78,19 @@ button {
   font-family: inherit;
 }
 
+.nav-resp {
+  display: none;
+}
+
+/* ----------- */
+/* ----------- */
+/* ----------- */
+/* ----------- */
+
 /* MAIN */
 
 main {
   width: 1140px;
-
   height: 100%;
   margin: 0 auto;
   margin-top: 140px;
@@ -107,10 +117,14 @@ h1 {
   margin-top: 20px;
 }
 
-.services li {
-  border: solid 1px #000000;
-  padding: 20px;
+.services div {
+  border: 1px solid black;
   border-radius: 10px;
+  /* 100% du parent moins les 50px occupé par les marges entre les blocs. Le résultat divisé par le nombre de bloc */
+  width: calc((100% - 50px) / 6);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .services li:hover {
@@ -118,7 +132,7 @@ h1 {
   background-color: #000000;
 }
 
-li i {
+.services i {
   margin-left: 15px;
 }
 
@@ -197,11 +211,18 @@ li i {
   display: flex;
   overflow: scroll hidden;
   gap: 10px;
-  flex: 2;
-}
+  width: 75%;
 
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
 .text {
-  flex: 1;
+  width: 25%;
 }
 
 .immanquables {
@@ -214,7 +235,11 @@ li i {
 
 .carousel img {
   width: 100%;
+  aspect-ratio: 270/200;
   object-fit: cover;
+}
+
+.slide > div {
   position: relative;
 }
 
@@ -222,9 +247,9 @@ li i {
   padding: 10px;
   border-radius: 50%;
   background-color: #ffffff;
-  position: relative;
-  bottom: 200px;
-  left: 220px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .infoCarousel li {
@@ -241,9 +266,9 @@ li i {
   margin-bottom: 5px;
 }
 
-.infoCarousel h4 {
+/* .infoCarousel h4 {
   margin-top: -30px;
-}
+} */
 
 .infoCarousel p {
   font-size: 14px;
@@ -261,6 +286,7 @@ li i {
 
 footer {
   background-color: #faf1ed;
+  width: 100vw;
 }
 
 footer div {
@@ -277,4 +303,96 @@ footer img {
 
 footer a {
   font-weight: bold;
+}
+
+/* Media queries */
+
+@media (max-width: 1184px) {
+  /* header */
+  .container {
+    border-bottom: 1px solid lightgrey;
+  }
+  header img {
+    display: none;
+  }
+
+  header p {
+    font-weight: 700;
+    display: block;
+  }
+
+  .nav-header {
+    display: none;
+  }
+
+  .nav-resp {
+    display: block;
+    padding-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  .nav-resp {
+    width: 90%;
+  }
+
+  main {
+    margin-top: 20px;
+  }
+
+  .nav-resp {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .nav-resp div {
+    border: 1px solid black;
+    border-radius: 10px;
+    /* 100% du parent moins les 50px occupé par les marges entre les blocs. Le résultat divisé par le nombre de bloc */
+    width: calc((100% - 50px) / 6);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Header */
+  .container div {
+    width: 20%;
+    padding-left: 10px;
+  }
+
+  .nav-resp div:nth-child(3) {
+    display: none;
+  }
+
+  .nav-resp div:nth-child(4) {
+    display: none;
+  }
+
+  .nav-resp div:nth-child(5) {
+    display: none;
+  }
+
+  .nav-resp div {
+    width: 35%;
+  }
+
+  .nav-resp {
+    gap: 10px;
+  }
+
+  /* Main */
+
+  .containerImg,
+  .infos,
+  .section2 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
